@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+ <meta charset="UTF-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>Birthday Celebration</title>
+
+ <style>
+
+ body {
+
+ background-color: #f7e0b6;
+
+ font-family: Arial, sans-serif;
+
+ }
+
+ .container {
+
+ max-width: 800px;
+
+ margin: 0 auto;
+
+ padding: 20px;
+
+ }
+
+ h1 {
+
+ text-align: center;
+
+ color: #ff6347;
+
+ }
+
+ .audio-container {
+
+ display: flex;
+
+ justify-content: space-around;
+
+ margin-top: 30px;
+
+ }
+
+ audio {
+
+ width: 45%;
+
+ margin-bottom: 20px;
+
+ }
+
+
+ #qr-code {
+
+ display: block;
+
+ margin: 20px auto;
+
+ }
+
+
+ /* Style for password form */
+
+ #passwordForm {
+
+ max-width: 300px;
+
+ margin: 30px auto;
+
+ padding: 20px;
+
+ background-color: #fff;
+ 
+ border-radius: 5px;
+
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+ }
+ #passwordForm label,
+
+ #passwordForm input,
+
+ #passwordForm button {
+
+ display: block;
+
+ margin-bottom: 10px;
+
+ }
+
+
+ #passwordForm input[type="password"],
+
+ #passwordForm button[type="submit"] {
+
+ width: 100%;
+
+ padding: 8px;
+
+ border: 1px solid #ccc;
+
+ border-radius: 3px;
+
+ }
+
+ </style>
+
+ </head>
+
+ <body>
+
+ <div class="container">
+
+ <h1>Happy Birthday!</h1>
+
+ <div class="audio-container">
+
+ <audio controls>
+
+ <source src="path_to_audio_file_1.mp3" type="audio/mpeg">
+
+ Your browser does not support the audio element.
+
+ </audio>
+
+ <audio controls>
+
+ <source src="path_to_audio_file_2.mp3" type="audio/mpeg">
+
+ Your browser does not support the audio element.
+
+ </audio>
+
+</div>
+
+ <img id="qr-code" src="https://api.qrserver.com/v1/create-qrcode/?size=150x150&data=https://your-website-url.com" alt="QR Code">
+
+ <!-- Password Form -->
+
+ <form id="passwordForm">
+
+  <label for="password">Enter Password:</label>
+
+  <input type="password" id="password" name="password" required>
+
+ <button type="submit">Submit</button>
+
+ </form>
+ 
+</div>
+
+
+ <script>
+
+ document.getElementById("passwordForm").addEventListener("submit", function(event)
+ 
+{
+
+ event.preventDefault(); // Prevent form submission
+
+
+ var password = document.getElementById("password").value;
+
+ var correctPassword = "N@nav2010"; // Replace with your actual password
+
+ if (password === correctPassword) {
+
+ window.location.href = "https://your-website-url.com"; // Replace with your actual
+
+website URL
+
+ } else {
+
+   alert("Incorrect password. Please try again.");
+
+ }
+
+ });
+
+ </script>
+
+</body>
+
+</html>
